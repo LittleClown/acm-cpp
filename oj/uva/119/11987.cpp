@@ -11,12 +11,12 @@ int sum[MAXN], id[MAXN];
 
 
 void merge(int u, int v) {
-    u = fs.getRoot(u);
-    v = fs.getRoot(v);
+    u = fs.root(u);
+    v = fs.root(v);
     if( u == v ) return;
     int w = sum[u] + sum[v];
     fs.merge(u, v);
-    sum[fs.getRoot(u)] = w;
+    sum[fs.root(u)] = w;
 }
 
 
@@ -30,10 +30,10 @@ int main() {
         int minId = N+1;
         for(int i=0; i < M; ++i) {
             scanf("%d%d", &op, &u);
-            ru = fs.getRoot(id[u]);
+            ru = fs.root(id[u]);
             if( op != 3 ) {
                 scanf("%d", &v);
-                rv = fs.getRoot(id[v]);
+                rv = fs.root(id[v]);
             }
 
             switch( op ) {

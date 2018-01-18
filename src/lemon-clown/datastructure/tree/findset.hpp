@@ -30,8 +30,8 @@ public:
      * @param x
      * @return
      */
-    int getRoot(int x) {
-        return f[x]? f[x]=getRoot(f[x]): x;
+    int root(int x) {
+        return f[x]? f[x]=root(f[x]): x;
     }
 
     /**
@@ -40,8 +40,8 @@ public:
      * @param y
      */
     void merge(int x, int y) {
-        x = getRoot(x);
-        y = getRoot(y);
+        x = root(x);
+        y = root(y);
         if( x == y ) return;
         if( cnt[x] > cnt[y] ) std::swap(x, y);
         f[x] = y;
