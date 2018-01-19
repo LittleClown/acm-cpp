@@ -44,19 +44,6 @@ public:
         done = false;
     }
 
-    explicit ISAP(int source, int converge, int n) {
-        this->s = source;
-        this->t = converge;
-        this->n = n;
-        this->maxn = n;
-        this->current_size = sizeof(int) * n;
-        this->cnt = new int[n];
-        this->cur = new int[n];
-        this->dist = new int[n];
-        this->path = new int[n];
-        G = new std::vector<int>[n];
-        done = false;
-    }
 public:
     static const int INF = 0x3f3f3f3f;
 

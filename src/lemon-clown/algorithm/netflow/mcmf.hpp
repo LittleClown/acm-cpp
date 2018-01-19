@@ -44,20 +44,6 @@ public:
         memset(this->inq, 0, current_size);
     }
 
-    explicit MCMF(int source, int converge, int n) {
-        this->s = source;
-        this->t = converge;
-        this->n = n;
-        this->maxn = n;
-        this->current_size = sizeof(int) * n;
-        this->inq = new int[n];
-        this->dist = new int[n];
-        this->path = new int[n];
-        G = new std::vector<int>[n];
-        done = false;
-        memset(this->inq, 0, current_size);
-    }
-
 public:
     static const int INF = 0x3f3f3f3f;
 
